@@ -17,7 +17,10 @@ form.addEventListener('input', throttle(onTextareaInput, 500));
 function onFormSubmit(evt) {
   evt.preventDefault();
   localStorage.removeItem(KEY_LOCAL);
-  evt.currentTarget.reset();
+  // evt.currentTarget.reset();
+  form.reset();
+  console.log(dataUser);
+  dataUser = {};
 }
 
 function onTextareaInput(evt) {
